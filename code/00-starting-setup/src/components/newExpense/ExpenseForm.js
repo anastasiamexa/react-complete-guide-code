@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './ExpenseForm.css';
 
-function ExpenseForm() {
+function ExpenseForm(props) {
   // Multiple states
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredAmount, setEnteredAmount] = useState('');
@@ -27,9 +27,10 @@ function ExpenseForm() {
       amount: enteredAmount,
       date: new Date(enteredDate)
     }
-
-    console.log(expenseData);
-
+    
+    // Pass the data to the parent component
+    // and execute the function
+    props.onSaveExpenseData(expenseData);
     // Clear the form after submitting
     setEnteredTitle('');
     setEnteredAmount('');
