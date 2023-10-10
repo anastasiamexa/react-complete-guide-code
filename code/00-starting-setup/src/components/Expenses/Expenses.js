@@ -1,7 +1,7 @@
 import ExpenseItem from "./ExpenseItem";
 import Card from "../UI/Card";
-import "./Expenses.css";
 import ExpensesFilter from "./ExpensesFilter";
+import "./Expenses.css";
 
 function Expenses(props) {
   function filterChangeHandler(selectedYear) {
